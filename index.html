@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedBull</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Administrador de Tareas (Simulacion RedBull)</h1>
+    </header>
+    <main>
+        <section id="taskForm">
+            <h2>Agregar Nueva Tarea</h2>
+            <form id="formTarea">
+                <label for="nombreTarea">Tarea:</label>
+                <input type="text" id="nombreTarea" required placeholder="Escribe una tarea...">
+                <label for="prioridadTarea">Prioridad:</label>
+                <select id="prioridadTarea">
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section id="taskList">
+            <h2>Lista de Tareas</h2>
+            <table id="tablaTareas" class="display">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tarea</th>
+                        <th>Prioridad</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Revisar el presupuesto del proyecto</td>
+                            <td>Alta</td>
+                            <td>
+                                <button class="editar">Editar</button>
+                                <button class="eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Preparar la presentación del equipo</td>
+                            <td>Media</td>
+                            <td>
+                                <button class="editar">Editar</button>
+                                <button class="eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Actualizar el informe semanal</td>
+                            <td>Baja</td>
+                            <td>
+                                <button class="editar">Editar</button>
+                                <button class="eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+            </table>
+        </section>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
